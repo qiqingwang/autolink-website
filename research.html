@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research — AutoLink</title>
+  <meta name="description" content="How AutoLink supports privacy protection — research and methods behind privacy-preserving experiential data." />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- ===== Navbar ===== -->
+  <header class="nav is-scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html#hero" class="nav__brand" aria-label="AutoLink home">
+        <img src="assets/logo.png" alt="AutoLink" class="nav__logo" />
+      </a>
+      <nav class="nav__links">
+        <a href="index.html#solutions" class="nav__link">Solutions</a>
+        <a href="research.html" class="nav__link is-active">Research</a>
+        <a href="index.html#join" class="nav__btn">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="research-main">
+    <!-- ===== Header ===== -->
+    <section class="research-hero">
+      <p class="section__eyebrow">Research · Privacy</p>
+      <h1 class="research-hero__title">
+        How we support <span class="grad-text">privacy protection</span>
+      </h1>
+      <p class="research-hero__lead">
+        Humanizing robots means learning from real human experience — which makes
+        protecting the people behind that data non-negotiable. Our approach is
+        grounded in privacy-preserving research.
+      </p>
+    </section>
+
+    <!-- ===== Selected research ===== -->
+    <section class="section research-section">
+      <div class="papers">
+        <a class="paper paper--featured" href="https://doi.org/10.1016/j.trc.2023.104453" target="_blank" rel="noopener">
+          <span class="paper__tag">Privacy-preserving learning</span>
+          <h3 class="paper__title">Privacy-preserving adaptive traffic signal control in a connected vehicle environment</h3>
+          <p class="paper__authors">Chaopeng Tan, Kaidi Yang</p>
+          <p class="paper__venue">Transportation Research Part C: Emerging Technologies · 2024 · Vol. 158</p>
+          <p class="paper__note">
+            Shows how systems can learn and act on connected-vehicle data while
+            cryptographically protecting individual records — a blueprint for
+            extracting value from experiential data without compromising privacy.
+          </p>
+          <span class="paper__link">Read paper <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="contact">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo.png" alt="AutoLink" class="footer__logo" />
+        <p class="footer__mission">Orchestrating Robot Humanization through Experiential Data.</p>
+      </div>
+      <div class="footer__contact">
+        <h4 class="footer__heading">Contact</h4>
+        <a href="mailto:qiqing.wang@u.nus.edu" class="footer__link">qiqing.wang@u.nus.edu</a>
+        <a href="index.html#join" class="footer__link">Get in touch</a>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <span>© <span id="year"></span> AutoLink. All rights reserved.</span>
+      <span>Human &times; Robot</span>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

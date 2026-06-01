@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoLink — Orchestrating Robot Humanization</title>
+  <meta name="description" content="AutoLink — Orchestrating Robot Humanization through Experiential Data." />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient background glows -->
+  <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- ===== Navbar ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__brand" aria-label="AutoLink home">
+        <img src="assets/logo.png" alt="AutoLink" class="nav__logo" />
+      </a>
+      <nav class="nav__links">
+        <a href="#solutions" class="nav__link">Solutions</a>
+        <a href="research.html" class="nav__link">Research</a>
+        <a href="#join" class="nav__btn">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero / Mission ===== -->
+    <section class="hero" id="hero">
+      <!-- Interactive halftone handshake (rendered to canvas) -->
+      <canvas class="hero__halftone" id="halftone" aria-label="A human and a robot shaking hands, rendered as a halftone dot matrix"></canvas>
+      <div class="hero__halo" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow">Our Mission</p>
+        <h1 class="hero__title">
+          Orchestrating <span class="grad-text">Robot&nbsp;Humanization</span><br />
+          through <span class="grad-text">Experiential&nbsp;Data</span>
+        </h1>
+        <div class="hero__actions">
+          <a href="#solutions" class="btn btn--primary">Explore Solutions</a>
+          <a href="#join" class="btn btn--ghost">Get in touch</a>
+        </div>
+      </div>
+
+      <a href="#solutions" class="hero__scroll" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ===== Solutions ===== -->
+    <section class="section solutions" id="solutions">
+      <div class="section__head">
+        <p class="section__eyebrow">For Robot Manufacturers</p>
+        <h2 class="section__title">Solutions for <span class="grad-text">Robot Humanization</span></h2>
+        <p class="section__lead">
+          A complete stack to capture human experiential data and translate it into
+          social understanding your robots can act on.
+        </p>
+      </div>
+
+      <div class="cards cards--2">
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <ellipse cx="12" cy="6" rx="7" ry="3" />
+              <path d="M5 6v6c0 1.66 3.13 3 7 3s7-1.34 7-3V6" />
+              <path d="M5 12v6c0 1.66 3.13 3 7 3s7-1.34 7-3v-6" />
+            </svg>
+          </div>
+          <h3 class="card__title">Data Orchestration Platform</h3>
+          <p class="card__text">
+            Collect, structure, and stream high-fidelity experiential data at scale —
+            a unified pipeline that turns raw human interaction into training-ready signal.
+          </p>
+          <ul class="card__list">
+            <li>Multimodal capture &amp; labeling</li>
+            <li>Privacy-preserving aggregation</li>
+            <li>Continuous, real-time data flows</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18M12 3c2.5 2.5 2.5 15.5 0 18M12 3c-2.5 2.5-2.5 15.5 0 18" />
+            </svg>
+          </div>
+          <h3 class="card__title">Social World Model</h3>
+          <p class="card__text">
+            A foundation model of human social dynamics — giving robots an intuitive
+            sense of context, intent, and norms so they act naturally around people.
+          </p>
+          <ul class="card__list">
+            <li>Context &amp; intent prediction</li>
+            <li>Social norm reasoning</li>
+            <li>Deployable across robot platforms</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Individuals ===== -->
+    <section class="section individuals" id="individuals">
+      <div class="section__head">
+        <p class="section__eyebrow">For Individuals</p>
+        <h2 class="section__title">Your experience has <span class="grad-text">value</span></h2>
+        <p class="section__lead">
+          Robots learn to be human by learning from humans. Share your everyday
+          experiential data — and we make it worth your while, safely.
+        </p>
+      </div>
+
+      <div class="cards cards--2">
+        <article class="card card--accent-coral">
+          <span class="card__badge">01</span>
+          <h3 class="card__title">Share data, earn rewards</h3>
+          <p class="card__text">
+            Contribute your experiential data and get rewarded for it. The more you
+            help shape humanized robots, the more you earn — your everyday moments,
+            turned into real value.
+          </p>
+        </article>
+
+        <article class="card card--accent-purple">
+          <span class="card__badge">02</span>
+          <h3 class="card__title">Your privacy, protected</h3>
+          <p class="card__text">
+            Your identity stays yours. We anonymize and protect every contribution
+            with privacy-preserving processing, so your data powers progress without
+            ever exposing you.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Join Us / Contact ===== -->
+    <section class="section join" id="join">
+      <div class="join__inner">
+        <div class="join__head">
+          <p class="section__eyebrow">Join Us</p>
+          <h2 class="section__title">Let's build the <span class="grad-text">humanized future</span> together</h2>
+          <p class="section__lead">
+            Whether you build robots or live alongside them, there's a place for you
+            at AutoLink. Reach out and let's talk.
+          </p>
+        </div>
+
+        <form class="form" id="contactForm" novalidate>
+          <div class="form__row">
+            <div class="form__field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form__field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="form__field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+          </div>
+          <div class="form__field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us more..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send message</button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="contact">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo.png" alt="AutoLink" class="footer__logo" />
+        <p class="footer__mission">
+          Orchestrating Robot Humanization through Experiential Data.
+        </p>
+      </div>
+      <div class="footer__contact">
+        <h4 class="footer__heading">Contact</h4>
+        <a href="mailto:qiqing.wang@u.nus.edu" class="footer__link">qiqing.wang@u.nus.edu</a>
+        <a href="#join" class="footer__link">Get in touch</a>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <span>© <span id="year"></span> AutoLink. All rights reserved.</span>
+      <span>Human &times; Robot</span>
+    </div>
+  </footer>
+
+  <script src="assets/halftone-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
