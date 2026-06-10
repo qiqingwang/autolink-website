@@ -25,8 +25,9 @@
       </a>
       <nav class="nav__links">
         <a href="#solutions" class="nav__link">Solutions</a>
+        <a href="team.html" class="nav__link">Team</a>
         <a href="research.html" class="nav__link">Research</a>
-        <a href="#join" class="nav__btn">Get in touch</a>
+        <a href="contact.html" class="nav__btn">Contact</a>
       </nav>
     </div>
   </header>
@@ -46,7 +47,7 @@
         </h1>
         <div class="hero__actions">
           <a href="#solutions" class="btn btn--primary">Explore Solutions</a>
-          <a href="#join" class="btn btn--ghost">Get in touch</a>
+          <a href="contact.html" class="btn btn--ghost">Get in touch</a>
         </div>
       </div>
 
@@ -142,58 +143,37 @@
       </div>
     </section>
 
-    <!-- ===== Join Us / Contact ===== -->
-    <section class="section join" id="join">
-      <div class="join__inner">
-        <div class="join__head">
-          <p class="section__eyebrow">Join Us</p>
-          <h2 class="section__title">Let's build the <span class="grad-text">humanized future</span> together</h2>
-          <p class="section__lead">
-            Whether you build robots or live alongside them, there's a place for you
-            at AutoLink. Reach out and let's talk.
-          </p>
-        </div>
-
-        <form class="form" id="contactForm" novalidate>
-          <div class="form__row">
-            <div class="form__field">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required />
-            </div>
-            <div class="form__field">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="you@example.com" required />
-            </div>
-          </div>
-          <div class="form__field">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
-          </div>
-          <div class="form__field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell us more..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full">Send message</button>
-          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
   </main>
 
   <!-- ===== Footer ===== -->
-  <footer class="footer" id="contact">
+  <footer class="footer">
     <div class="footer__inner">
       <div class="footer__brand">
         <img src="assets/logo.png" alt="AutoLink" class="footer__logo" />
-        <p class="footer__mission">
-          Orchestrating Robot Humanization through Experiential Data.
-        </p>
+        <p class="footer__tagline">Built in Singapore.<br>Designed for the World.</p>
+        <div class="footer__brand-marquee">
+          <div class="marquee__track">
+            <img src="partners/NUS.jpg"              alt="NUS"           class="marquee__logo" />
+            <img src="partners/NUS%20Enterprise.jpg"  alt="NUS Enterprise" class="marquee__logo" />
+            <img src="partners/NUS%20GRIP.png"        alt="NUS GRIP"      class="marquee__logo" />
+            <img src="partners/EngineAI.jpg"           alt="EngineAI"      class="marquee__logo" />
+            <img src="partners/Jinjiang.jpg"           alt="Jinjiang"      class="marquee__logo" />
+            <img src="partners/1.png"                  alt="Partner"       class="marquee__logo" />
+            <img src="partners/NUS.jpg"              alt="NUS"           class="marquee__logo" />
+            <img src="partners/NUS%20Enterprise.jpg"  alt="NUS Enterprise" class="marquee__logo" />
+            <img src="partners/NUS%20GRIP.png"        alt="NUS GRIP"      class="marquee__logo" />
+            <img src="partners/EngineAI.jpg"           alt="EngineAI"      class="marquee__logo" />
+            <img src="partners/Jinjiang.jpg"           alt="Jinjiang"      class="marquee__logo" />
+            <img src="partners/1.png"                  alt="Partner"       class="marquee__logo" />
+          </div>
+        </div>
       </div>
-      <div class="footer__contact">
-        <h4 class="footer__heading">Contact</h4>
-        <a href="mailto:qiqing.wang@u.nus.edu" class="footer__link">qiqing.wang@u.nus.edu</a>
-        <a href="#join" class="footer__link">Get in touch</a>
-      </div>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="#solutions" class="footer__nav-link">Solutions</a>
+        <a href="team.html" class="footer__nav-link">Team</a>
+        <a href="research.html" class="footer__nav-link">Research</a>
+        <a href="contact.html" class="footer__nav-link">Contact</a>
+      </nav>
     </div>
     <div class="footer__bar">
       <span>© <span id="year"></span> AutoLink. All rights reserved.</span>

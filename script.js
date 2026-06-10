@@ -117,14 +117,10 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
   render();
 })();
 
-// ===== Contact form (Formspree) =====
+// ===== Contact form (Web3Forms) =====
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
 const submitBtn = form.querySelector('button[type="submit"]');
-
-// 1. Create a free form at https://formspree.io (use qiqing.wang@u.nus.edu).
-// 2. Paste your endpoint below, e.g. 'https://formspree.io/f/abcdwxyz'.
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -147,8 +143,9 @@ form.addEventListener('submit', async (e) => {
     return;
   }
 
-  if (FORMSPREE_ENDPOINT.includes('YOUR_FORM_ID')) {
-    status.textContent = 'Form not configured yet — add your Formspree endpoint in script.js.';
+  const accessKey = (data.get('access_key') || '').toString();
+  if (accessKey === 'YOUR_WEB3FORMS_KEY') {
+    status.textContent = 'Form not configured — paste your Web3Forms access key into contact.html.';
     status.classList.add('is-err');
     return;
   }
@@ -159,19 +156,18 @@ form.addEventListener('submit', async (e) => {
   status.textContent = '';
 
   try {
-    const res = await fetch(FORMSPREE_ENDPOINT, {
+    const res = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: { Accept: 'application/json' },
       body: data,
     });
-    if (res.ok) {
+    const out = await res.json().catch(() => ({}));
+    if (res.ok && out.success) {
       status.textContent = "Thanks! We've received your message and will be in touch soon.";
       status.classList.add('is-ok');
       form.reset();
     } else {
-      const out = await res.json().catch(() => ({}));
-      const msg = out?.errors?.map((x) => x.message).join(', ');
-      status.textContent = msg || 'Something went wrong. Please try again.';
+      status.textContent = out.message || 'Something went wrong. Please try again.';
       status.classList.add('is-err');
     }
   } catch (err) {

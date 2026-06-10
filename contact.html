@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research — AutoLink</title>
-  <meta name="description" content="How AutoLink supports privacy protection — research and methods behind privacy-preserving experiential data." />
+  <title>Contact — AutoLink</title>
+  <meta name="description" content="Get in touch with AutoLink — let's build the humanized future together." />
   <link rel="icon" type="image/png" href="assets/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,74 +25,49 @@
       <nav class="nav__links">
         <a href="index.html#solutions" class="nav__link">Solutions</a>
         <a href="team.html" class="nav__link">Team</a>
-        <a href="research.html" class="nav__link is-active">Research</a>
-        <a href="contact.html" class="nav__btn">Contact</a>
+        <a href="research.html" class="nav__link">Research</a>
+        <a href="contact.html" class="nav__btn is-active">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="research-main">
-    <!-- ===== Header ===== -->
-    <section class="research-hero">
-      <p class="section__eyebrow">Research · Privacy</p>
-      <h1 class="research-hero__title">Privacy-preserving research</h1>
-      <p class="research-hero__lead">
-        Humanizing robots requires learning from real human experience —
-        which makes protecting the people behind that data non-negotiable.
-      </p>
-    </section>
-
-    <!-- ===== Papers list ===== -->
-    <section class="section research-section">
-      <div class="papers-list">
-
-        <div class="papers-list__header">
-          <span>• Date</span>
-          <span>• Title</span>
-          <span>• Category</span>
-          <span></span>
+    <section class="section join" style="padding-top: 60px;">
+      <div class="join__inner">
+        <div class="join__head">
+          <p class="section__eyebrow">Contact Us</p>
+          <h1 class="section__title">Let's build the humanized future together</h1>
+          <p class="section__lead">
+            Whether you build robots or live alongside them, there's a place for you
+            at AutoLink. Reach out and let's talk.
+          </p>
         </div>
 
-        <a class="paper-row" href="https://arxiv.org/abs/2602.01804" target="_blank" rel="noopener">
-          <span class="paper-row__date">2026</span>
-          <div class="paper-row__content">
-            <p class="paper-row__title">Fostering Data Collaboration in Digital Transportation Marketplaces: The Role of Privacy-Preserving Mechanisms</p>
-            <p class="paper-row__authors">Qiqing Wang, Haokun Yu, Kaidi Yang</p>
+        <form class="form" id="contactForm" novalidate>
+          <!-- Web3Forms: replace YOUR_WEB3FORMS_KEY with the key from web3forms.com -->
+          <input type="hidden" name="access_key" value="2372e0a4-4cc6-4e2c-a334-fc57e57cd900" />
+          <input type="hidden" name="from_name" value="AutoLink Website" />
+          <div class="form__row">
+            <div class="form__field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form__field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
           </div>
-          <span class="paper-row__category">Data Markets</span>
-          <span class="paper-row__arrow">→</span>
-        </a>
-
-        <a class="paper-row" href="https://arxiv.org/abs/2602.04262" target="_blank" rel="noopener">
-          <span class="paper-row__date">2026</span>
-          <div class="paper-row__content">
-            <p class="paper-row__title">Parameter Privacy-Preserving Data Sharing: A Particle-Belief MDP Formulation</p>
-            <p class="paper-row__authors">Haokun Yu, Jingyuan Zhou, Kaidi Yang</p>
+          <div class="form__field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
           </div>
-          <span class="paper-row__category">Privacy · MDP</span>
-          <span class="paper-row__arrow">→</span>
-        </a>
-
-        <a class="paper-row" href="https://doi.org/10.1016/j.trc.2024.104743" target="_blank" rel="noopener">
-          <span class="paper-row__date">2024</span>
-          <div class="paper-row__content">
-            <p class="paper-row__title">Privacy-preserving data fusion for traffic state estimation: A vertical federated learning approach</p>
-            <p class="paper-row__authors">Qiqing Wang, Kaidi Yang</p>
+          <div class="form__field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us more..." required></textarea>
           </div>
-          <span class="paper-row__category">Federated Learning</span>
-          <span class="paper-row__arrow">→</span>
-        </a>
-
-        <a class="paper-row" href="https://doi.org/10.1016/j.trc.2023.104453" target="_blank" rel="noopener">
-          <span class="paper-row__date">2024</span>
-          <div class="paper-row__content">
-            <p class="paper-row__title">Privacy-preserving adaptive traffic signal control in a connected vehicle environment</p>
-            <p class="paper-row__authors">Chaopeng Tan, Kaidi Yang</p>
-          </div>
-          <span class="paper-row__category">Traffic Control</span>
-          <span class="paper-row__arrow">→</span>
-        </a>
-
+          <button type="submit" class="btn btn--primary btn--full">Send message</button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
   </main>
@@ -133,6 +108,7 @@
     </div>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="assets/halftone-data.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
